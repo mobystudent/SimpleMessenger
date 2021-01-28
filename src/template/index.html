@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="max-age=31536000, public">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>Главная</title>
+    <link rel="favicon" href="favicon/favicon.ico">
+    <link rel="stylesheet" href="style.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script defer src="js/script.min.js"></script>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;" aria-hidden="true" focusable="false">
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14" id="messages">
+        <path d="M1 0h11c.55 0 1 .45 1 1v7c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1zm9 7.33v5.42l-4.5-4.5 4.5-.92z" fill="#73b3d5"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" id="like">
+        <path d="M5.98 1.46S7.37 0 8.96-.02c1.6-.02 3 .78 3.03 2.98.02 2.21-6.03 7.77-6.03 7.77m.05-9.27S4.62 0 3.02-.02C1.43-.04.02.76 0 2.96c-.02 2.21 6.03 7.77 6.03 7.77" fill="#73b3d5"></path>
+      </symbol>
+    </svg>
+    <div class="wrapper">
+      <main class="main">
+        <section class="manager">
+          <picture class="manager__img img"><img class="img__item" src="images/manager.png" alt="manager"></picture>
+          <div class="manager__data"><span class="manager__name">Вероника Ростова</span><span class="manager__position">Менеджер по продажам</span></div>
+          <p class="manager__offer">Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны</p>
+          <div class="manager__service service">
+            <header class="service__header"><span class="service__title">Услуг</span></header>
+            <div class="service__graf">
+              <div class="service__data"><span class="service__name">Ручное бронирование</span><span class="service__count">11</span></div>
+              <div class="service__data"><span class="service__name">Пакетные туры</span><span class="service__count">3</span></div>
+              <div class="service__data"><span class="service__name">Отели</span><span class="service__count">1</span></div>
+            </div>
+            <footer class="service__footer"><span class="service__total-name">Всего</span><span class="service__total-count">1</span></footer>
+          </div>
+        </section>
+        <section class="review">
+          <header class="review__header">
+            <div class="review__wrap">
+              <h3 class="review__title">Последние отзывы</h3><a class="review__link" href="#">Все отзывы</a>
+            </div>
+            <div class="review__info">
+              <div class="review__block review__block--like">
+                <svg class="icon icon--like">
+                  <use xlink:href="#like"></use>
+                </svg><span class="review__num">131</span>
+              </div>
+              <div class="review__block">
+                <svg class="icon icon--messages">
+                  <use xlink:href="#messages"></use>
+                </svg><span class="review__num">14</span>
+              </div>
+            </div>
+          </header>
+          <div class="message">
+            <article class="message__item">
+              <header class="message__header"><span class="message__name">Самуил</span>
+                <time class="message__date" datetime="2011-10-13">13 октября 2011
+                </time>
+              </header>
+              <div class="message__block">
+                <p class="message__text">Привет, Верунь! ниче себе ты крутая. фотка класс!!!!
+                </p>
+              </div>
+            </article>
+            <article class="message__item">
+              <header class="message__header"><span class="message__name">Лилия Семёновна</span>
+                <time class="message__date" datetime="2011-10-14">14 октября 2011
+                </time>
+              </header>
+              <div class="message__block">
+                <p class="message__text">Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент, это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?
+                </p>
+              </div>
+            </article>
+            <article class="message__item">
+              <header class="message__header"><span class="message__name">Лилия Семёновна</span>
+                <time class="message__date" datetime="2011-10-14">14 октября 2011
+                </time>
+              </header>
+              <div class="message__block">
+                <p class="message__text">Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="comment">
+          <form class="comment__form" action="#" method="get" onsubmit="return false">
+            <textarea class="comment__textarea" cols="60" rows="5"></textarea>
+            <input class="comment__button" type="submit" value="Написать консультанту">
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

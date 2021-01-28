@@ -1,0 +1,66 @@
+.message {
+	&__item {
+		flex-flow: wrap;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__header {
+		margin-bottom: 10px;
+	}
+
+	&__name {
+		font: bold 14px/20px Arial, sans-serif;
+		color: $gray;
+		margin-right: 5px;
+	}
+
+	&__date {
+		font: 11px/20px Arial, sans-serif;
+		color: $light-gray;
+	}
+
+	&__block {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -9px;
+			left: 24px;
+			width: 0;
+			height: 0;
+			border: 5px solid transparent;
+			border-bottom: 5px solid  rgba(0,0,0,.19);
+			border-left: 5px solid  rgba(0,0,0,.19);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: -7px;
+			left: 25px;
+			width: 0;
+			height: 0;
+			border: 5px solid transparent;
+			border-bottom: 5px solid  $lighter-blue;
+			border-left: 5px solid  $lighter-blue;
+		}
+	}
+
+	&__text {
+		width: 100%;
+		border: 1px solid rgba(0,0,0,.19);
+		background-color: $lighter-blue;
+		font: 14px/20px Arial, sans-serif;
+		text-align: justify;
+		color: $gray;
+		padding: 15px 20px 10px;
+
+		@media (min-width: 490px) {
+			text-align: left;
+		}
+	}
+}

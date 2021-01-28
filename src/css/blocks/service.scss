@@ -1,0 +1,91 @@
+.service {
+	&__header {
+		display: flex;
+	}
+
+	&__title {
+		display: inline-flex;
+		padding: 0px 5px 5px;
+		flex: 0 0 75px;
+		font: 13px/15px Arial, sans-serif;
+		color: $gray;
+	}
+
+	&__graf {
+		position: relative;
+		border-top: 1px solid $middle-gray;
+		border-bottom: 1px solid $middle-gray;
+		padding: 15px 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 15px;
+			left: 0;
+			width: 1px;
+			height: calc(100% - 30px);
+			background: rgba($gray, 0.2);
+			z-index: 1;
+		}
+	}
+
+	&__data {
+		display: flex;
+		align-items: center;
+
+		@each $i, $j, $k in (1, 220px, $light-green), (2, 55px, $light-blue), (3, 35px, $light-blue) {
+			&:nth-child(#{$i}) {
+				.service__name::before{
+					content: '';
+					width: $j;
+					height: 25px;
+					background-color: $k;
+					border-radius: 0 3px 3px 0;
+					position: absolute;
+					top: 1px;
+					left: 0;
+					z-index: -1;
+				}
+			}
+		}
+	}
+
+	&__name {
+		flex: 1 0 auto;
+		font: 13px/26px Arial, sans-serif;
+		color: $gray;
+		padding-left: 5px;
+		position: relative;
+	}
+
+	&__count {
+		justify-self: center;
+		flex: 0 0 75px;
+		font: bold 13px/15px Arial, sans-serif;
+		color: $gray;
+		padding-right: 25px;
+		text-align: center;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		padding-top: 12px;
+	}
+
+	&__total {
+		&-name {
+			flex: 1 0 auto;
+			font: bold 16px/20px Arial, sans-serif;
+			color: $gray;
+		}
+
+		&-count {
+			flex: 0 0 75px;
+			font: bold 16px/20px Arial, sans-serif;
+			color: $gray;
+			padding-right: 35px;
+			text-align: center;
+		}
+	}
+}

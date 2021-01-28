@@ -1,0 +1,8 @@
+.img {
+	flex: 0 0 auto;
+	
+	&__item {
+		height: 100%;
+		object-fit: contain;
+	}
+}

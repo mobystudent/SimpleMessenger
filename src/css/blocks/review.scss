@@ -1,0 +1,62 @@
+.review {
+	position: relative;
+	display: flex;
+	flex-flow: column;
+	margin-bottom: 15px;
+
+	&__header {
+		display: flex;
+		flex-flow: column;
+		margin-bottom: 15px;
+
+		@media (min-width: 490px) {
+			flex-flow: row;
+			justify-content: space-between;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		width: 100%;
+		margin-bottom: 5px;
+
+		@media (min-width: 490px) {
+			display: inline-flex;
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		font: bold 16px/16px Arial, sans-serif;
+		color: $gray;
+		margin-right: 10px;
+	}
+
+	&__link {
+		font: 14px/16px Arial, sans-serif;
+		cursor: pointer;
+		color: $blue;
+		text-decoration: underline;
+	}
+
+	&__info {
+		display: flex;
+		padding-top: 3px;
+	}
+
+	&__block {
+		display: flex;
+		align-items: center;
+
+		&--like {
+			margin-right: 20px;
+		}
+	}
+
+	&__num {
+		font: 12px Arial, sans-serif;
+		color: $gray;
+		margin-left: 5px;
+	}
+}

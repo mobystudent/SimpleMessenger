@@ -1,0 +1,111 @@
+extends includes/layout
+
+block title
+	title Главная
+
+block content
+			
+	.wrapper
+		main.main
+			section.manager
+				picture.manager__img.img
+					img.img__item(src="images/manager.png" alt="manager")
+				.manager__data
+					span.manager__name
+						| Вероника Ростова
+					span.manager__position
+						| Менеджер по продажам
+				p.manager__offer
+					| Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны
+					
+				.manager__service.service
+					header.service__header
+						span.service__title
+							| Услуг
+					.service__graf
+						
+						-
+							const data = [
+								{
+									name: 'Ручное бронирование',
+									count: 11
+								},
+								{
+									name: 'Пакетные туры',
+									count: 3
+								},
+								{
+									name: 'Отели',
+									count: 1
+								}
+							];
+
+						each item in data
+							.service__data
+								span.service__name
+									!= item.name
+								span.service__count
+									!= item.count
+									
+					footer.service__footer
+						span.service__total-name
+							| Всего
+						span.service__total-count
+							| 1
+						
+			section.review
+				header.review__header
+					.review__wrap
+						h3.review__title
+							| Последние отзывы
+						a.review__link(href="#")
+							| Все отзывы
+					.review__info
+						.review__block.review__block--like
+							svg.icon.icon--like
+								use(xlink:href="#like")
+							span.review__num
+								| 131
+						.review__block
+							svg.icon.icon--messages
+								use(xlink:href="#messages")
+							span.review__num
+								| 14
+				.message
+					-
+						const messages = [
+							{
+								name: 'Самуил',
+								date: '13 октября 2011',
+								datetime: '2011-10-13',
+								message: 'Привет, Верунь! ниче себе ты крутая. фотка класс!!!!'
+							},
+							{
+								name: 'Лилия Семёновна',
+								date: '14 октября 2011',
+								datetime: '2011-10-14',
+								message: 'Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент, это и есть всемирно известный центр огранки алмазов и торговли бриллиантами?'
+							},
+							{
+								name: 'Лилия Семёновна',
+								date: '14 октября 2011',
+								datetime: '2011-10-14',
+								message: 'Вероника, здравствуйте! Есть такой вопрос: Особый вид куниц жизненно стабилизирует кинетический момент?'
+							}
+						];
+						
+					each item in messages
+						article.message__item
+							header.message__header
+								span.message__name
+									!= item.name
+								time.message__date(datetime!=item.datetime)
+									!= item.date
+							.message__block
+								p.message__text
+									!= item.message
+									
+			section.comment
+				form.comment__form(action="#" method="get" onsubmit="return false")
+					textarea.comment__textarea(cols="60" rows="5")
+					input.comment__button(type="submit" value="Написать консультанту")
