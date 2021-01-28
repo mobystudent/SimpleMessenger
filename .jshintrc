@@ -2,5 +2,6 @@
   "strict": "global",
   "esversion": 10,
   "unused": true,
-  "browser" : true
+  "browser" : true,
+  "node": true
 }
