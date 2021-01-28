@@ -28,16 +28,19 @@
 	}
 
 	&__title {
-		font: bold 16px/16px Arial, sans-serif;
+		@extend .text--uppermedium;
+		line-height: 16px;
+		font-weight: 700;
 		color: $gray;
 		margin-right: 10px;
 	}
 
 	&__link {
-		font: 14px/16px Arial, sans-serif;
-		cursor: pointer;
-		color: $blue;
+		@extend .text--medium;
+		line-height: 16px;
 		text-decoration: underline;
+		color: $blue;
+		cursor: pointer;
 	}
 
 	&__info {
@@ -55,7 +58,7 @@
 	}
 
 	&__num {
-		font: 12px Arial, sans-serif;
+		@extend .text--small;
 		color: $gray;
 		margin-left: 5px;
 	}

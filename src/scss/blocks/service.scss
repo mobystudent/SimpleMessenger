@@ -7,7 +7,7 @@
 		display: inline-flex;
 		padding: 0px 5px 5px;
 		flex: 0 0 75px;
-		font: 13px/15px Arial, sans-serif;
+		@extend .text--premedium;
 		color: $gray;
 	}
 
@@ -52,7 +52,8 @@
 
 	&__name {
 		flex: 1 0 auto;
-		font: 13px/26px Arial, sans-serif;
+		@extend .text--premedium;
+		line-height: 26px;
 		color: $gray;
 		padding-left: 5px;
 		position: relative;
@@ -61,7 +62,7 @@
 	&__count {
 		justify-self: center;
 		flex: 0 0 75px;
-		font: bold 13px/15px Arial, sans-serif;
+		@extend .text--premedium;
 		color: $gray;
 		padding-right: 25px;
 		text-align: center;
@@ -76,13 +77,15 @@
 	&__total {
 		&-name {
 			flex: 1 0 auto;
-			font: bold 16px/20px Arial, sans-serif;
+			@extend .text--uppermedium;
+			font-weight: 700;
 			color: $gray;
 		}
 
 		&-count {
 			flex: 0 0 75px;
-			font: bold 16px/20px Arial, sans-serif;
+			@extend .text--uppermedium;
+			font-weight: 700;
 			color: $gray;
 			padding-right: 35px;
 			text-align: center;

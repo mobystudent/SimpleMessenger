@@ -12,13 +12,14 @@
 	}
 
 	&__name {
-		font: bold 14px/20px Arial, sans-serif;
+		@extend .text--medium;
+		font-weight: 700;
 		color: $gray;
 		margin-right: 5px;
 	}
 
 	&__date {
-		font: 11px/20px Arial, sans-serif;
+		@extend .text--presmall;
 		color: $light-gray;
 	}
 
@@ -54,7 +55,7 @@
 		width: 100%;
 		border: 1px solid rgba(0,0,0,.19);
 		background-color: $lighter-blue;
-		font: 14px/20px Arial, sans-serif;
+		@extend .text--medium;
 		text-align: justify;
 		color: $gray;
 		padding: 15px 20px 10px;

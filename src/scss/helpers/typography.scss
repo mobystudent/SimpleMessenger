@@ -1,3 +1,21 @@
 .text {
+	&--uppermedium {
+		font: 16px/20px Arial, sans-serif;
+	}
 
+	&--medium {
+		font: 14px/20px Arial, sans-serif;
+	}
+
+	&--premedium {
+		font: 13px/15px Arial, sans-serif;
+	}
+
+	&--small {
+		font: 12px Arial, sans-serif;
+	}
+
+	&--presmall {
+		font: 11px/20px Arial, sans-serif;
+	}
 }
